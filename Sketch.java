@@ -46,17 +46,14 @@ public class Sketch extends PApplet {
   public void drawHeart(int x, int y) {
       int[] heartColor = randomColour();
       fill(heartColor[0], heartColor[1], heartColor[2]);
-      // Draw the left half of the heart
       beginShape();
       vertex(x + 5, y + 3);
       bezierVertex(x + 5, y, x, y, x, y + 3);
       endShape(CLOSE);
-      // Draw the right half of the heart
       beginShape();
       vertex(x + 5, y + 3);
       bezierVertex(x + 5, y, x + 10, y, x + 10, y + 3);
       endShape(CLOSE);
-      // Draw the bottom triangle of the heart
       beginShape();
       vertex(x, y + 3);
       vertex(x + 10, y + 3);
@@ -71,14 +68,10 @@ public class Sketch extends PApplet {
    * @param y - the Y value of top left corner of where the stickman will be drawn
    */
   public void drawStickman(int x, int y) {
-      // Draw the head
       fill(0);
       ellipse(x + 5, y + 5, 10, 10);
-      // Draw the body
       line(x + 5, y + 12, x + 5, y + 30);
-      // Draw the arms
       line(x, y + 15, x + 10, y + 15);
-      // Draw the legs
       line(x + 5, y + 30, x, y + 45);
       line(x + 5, y + 30, x + 10, y + 45);
   }
